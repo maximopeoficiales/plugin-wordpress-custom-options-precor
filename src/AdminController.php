@@ -11,7 +11,7 @@ class AdminController
     public static function index()
     {
         try {
-            echo view('adminPage', []);
+            require pathView('adminPage');
         } catch (\Throwable $th) {
             echo $th;
         }
