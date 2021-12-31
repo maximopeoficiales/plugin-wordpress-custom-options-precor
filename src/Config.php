@@ -19,12 +19,12 @@ class Config
      * Language Option
      * define a unique word for translate call
      */
-    public $language_name = 'antonella';
+    public $language_name = 'antonella_precor_options';
     /**
      * Plugin text prefix
      * define a unique word for this plugin
      */
-    public $plugin_prefix = 'ch_nella';
+    public $plugin_prefix = 'ch_nella_precor_options';
     /**
      * POST data process
      * get the post data and execute the function
@@ -90,14 +90,14 @@ class Config
     * set your menu option here
     */
     public $plugin_menu = [
-        /*
         [
             "path"      => ["page"],
-            "name"      => "My Custom Page",
-            "function"  => __NAMESPACE__."\Admin\PageAdmin::index",
-            "icon"      => "antonella-icon.png",
-            "slug"      => "my-custom-page",
-        ]
+            "name"      => "Opciones Precor",
+            "function"  => __NAMESPACE__ . "\AdminController::index",
+            "icon"      => "configuraciones.png",
+            "slug"      => "options-precor",
+        ],
+        /*
         
             [
                 "path"      => ["page"],
@@ -151,7 +151,8 @@ class Config
                 "slug"      => "sub-option",
                 "function"  => __NAMESPACE__."\Admin::option_page",
             ]
-        */];
+        */
+    ];
 
     /**
      * Custom Post Type

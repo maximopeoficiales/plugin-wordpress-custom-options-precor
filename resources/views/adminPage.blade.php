@@ -3,7 +3,8 @@
     <input type="hidden" name="updateOptionsConfigPrecor" value="1">
     <div class="form-group my-2">
         <label for="precor_validez_oferta">Texto de Validez de Oferta del PDF:</label>
-        <input type="text" name="precor_validez_oferta" id="precor_validez_oferta" class="form-control" placeholder="Ejm: 08 DIAS" value="{{ get_option('precor_validez_oferta') }}">
+        <input name="precor_validez_oferta" id="precor_validez_oferta" class="form-control" placeholder="Ejm: 08 DIAS"
+            value="{{ get_option('precor_validez_oferta') }}">
     </div>
 
     <button type="submit" class="button blue">Guardar Cambios</button>
