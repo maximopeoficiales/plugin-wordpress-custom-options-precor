@@ -28,14 +28,21 @@ class WsStockPrecor extends SoapHeader
 
 function getServiceWsStosk(): SoapClient
 {
-    $wsdl = "https://ws.sunat.gob.pe/ws/v2/controladuanero/ReconocimientoFisicoService.htm?wsdl";
-    $username = "20422696548S1STEMAS";
-    $password = "S1STEMAS";
+    $wsdl = "http://srvpmpsapqas.precor.com.pe:8002/sap/bc/srt/wsdl/bndg_EC860AAA970429F180C900505601055A/wsdl11/allinone/ws_policy/document?sap-client=400";
+    $username = "EXT_NOVA";
+    $password = "Novategica2$";
 
-    $wsse_header = new WsStockPrecor($username, $password);
-    $client = new SoapClient($wsdl, array(
+    // $wsse_header = new WsStockPrecor($username, $password);
+    $options = array(
         'trace' => true,
-    ));
-    $client->__setSoapHeaders(array($wsse_header));
+        'login' => $username,
+        'password' => $password,
+        'authentication' => SOAP_AUTHENTICATION_BASIC,
+        'soap_version' => SOAP_1_1,
+        'connection_timeout' => 15,
+        'encoding' => 'UTF-8'
+    );
+    $client = new SoapClient($wsdl, $options);
+    // $client->__setSoapHeaders(array($wsse_header));
     return $client;
 }
