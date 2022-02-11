@@ -42,3 +42,8 @@ function assetBuildReact(string $file): string
 {
     return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/build/$file";
 }
+
+function assetWebservices(string $file): string
+{
+    return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/webservices/$file";
+}

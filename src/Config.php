@@ -52,7 +52,9 @@ class Config
      * @example ['body_class','JWOBDN::function',10,2]
      * @example ['body_class',['JWOBDN','function'],10,2]
      */
-    public $add_action = [];
+    public $add_action = [
+        ["rest_api_init", __NAMESPACE__ . '\WsStockController::getStockPrecor'],
+    ];
     /**
      * add custom shortcodes
      * @input array
