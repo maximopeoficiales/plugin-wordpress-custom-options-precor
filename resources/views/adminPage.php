@@ -3,10 +3,16 @@
     <input type="hidden" name="updateOptionsConfigPrecor" value="1">
     <div class="form-group my-2">
         <label for="precor_validez_oferta">Texto de Validez de Oferta del PDF:</label>
-        <input name="precor_validez_oferta" id="precor_validez_oferta" class="form-control" placeholder="Ejm: 08 DIAS"
-            value="<?= get_option('precor_validez_oferta') ?>">
+        <input name="precor_validez_oferta" id="precor_validez_oferta" class="form-control" placeholder="Ejm: 08 DIAS" value="<?= get_option('precor_validez_oferta') ?>">
     </div>
 
+    <div class="form-group my-2">
+        <label for="precor_text_no_hay_stock">Texto de Mensaje No hay Stock:</label>
+        <p><small>Use la palabra @nombre_producto para reemplazar con el producto que no tiene stock en la web</small></p>
+        <input name="precor_text_no_hay_stock" id="precor_text_no_hay_stock" class="form-control" placeholder="No hay stock para @nombre_producto, por favor contacte con su ejecutivo de ventas." value="<?= get_option('precor_text_no_hay_stock') ?>">
+    </div>
+
+    <br>
     <button type="submit" class="button blue">Guardar Cambios</button>
 </form>
 

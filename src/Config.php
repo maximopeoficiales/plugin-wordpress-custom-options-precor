@@ -13,7 +13,8 @@ class Config
     * @return void
     */
     public $plugin_options = [
-        "precor_validez_oferta" => "08 DIAS"
+        "precor_validez_oferta" => "08 DIAS",
+        "precor_text_no_hay_stock" => "No hay stock para @nombre_producto, por favor contacte con su ejecutivo de ventas."
     ];
     /**
      * Language Option
